@@ -1,68 +1,40 @@
-// module.exports = {
-//   extends: [
-//     'eslint:recommended',
-//     'plugin:react/recommended',
-//     'react-app',
-//   ],
-//   plugins: ['react', 'react-hooks'],
-//   env: {
-//     browser: true,
-//     jasmine: true,
-//     jest: true,
-//   },
-//   rules: {
-//     'react-hooks/exhaustive-deps': 'off',
-//     'react/prop-types': 'off',
-//     'react/display-name': 'off',
-//     'react/jsx-key': 'off',
-//     'react/no-children-prop': 'off',
-//   },
-//   overrides: [
-//     {
-//       files: ['**/*.ts?(x)'],
-//       extends: [
-//         'eslint:recommended',
-//         'plugin:@typescript-eslint/eslint-recommended',
-//         'plugin:@typescript-eslint/recommended',
-//         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-//       ],
-//       plugins: ['@typescript-eslint'],
-//       parser: '@typescript-eslint/parser',
-//       parserOptions: {
-//         project: './tsconfig.json',
-//         tsconfigRootDir: '.',
-//       },
-//     },
-//   ],
-// };
-
 module.exports = {
   extends: [
     'eslint:recommended',
-    'react-app',
     'plugin:react/recommended',
+    'react-app',
   ],
-  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
+  plugins: ['react', 'react-hooks'],
   env: {
     browser: true,
     jasmine: true,
     jest: true,
   },
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: './',
-    ecmaFeatures: {
-      jsx: true,
-    }
+  rules: {
+    'react-hooks/exhaustive-deps': 'off',
+    'react/prop-types': 'off',
+    'react/display-name': 'off',
+    'react/jsx-key': 'off',
+    'react/no-children-prop': 'off',
   },
   overrides: [
     {
       files: ['**/*.ts?(x)'],
-      extends: ['./config/typescript.eslintrc.js'],
-    }
-  ]
-}
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+      plugins: ['@typescript-eslint'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir: '.',
+      },
+    },
+  ],
+};
 
 // module.exports = {
 //   extends: [
