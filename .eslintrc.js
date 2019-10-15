@@ -39,27 +39,88 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'react-app',
     'plugin:react/recommended',
   ],
   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: '.',
-    ecmaFeatures: {
-      jsx: true,
-    }
-  },
   env: {
     browser: true,
     jasmine: true,
     jest: true,
   },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+    tsconfigRootDir: './',
+    ecmaFeatures: {
+      jsx: true,
+    }
+  },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      extends: ['./config/typescript.eslintrc.js'],
+    }
+  ]
 }
+
+// module.exports = {
+//   extends: [
+//     'eslint:recommended',
+//     'plugin:@typescript-eslint/eslint-recommended',
+//     'plugin:@typescript-eslint/recommended',
+//     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+//     'react-app',
+//     'plugin:react/recommended',
+//   ],
+//   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
+//   parser: '@typescript-eslint/parser',
+//   parserOptions: {
+//     project: './tsconfig.json',
+//     tsconfigRootDir: './',
+//     ecmaFeatures: {
+//       jsx: true,
+//     }
+//   },
+//   env: {
+//     browser: true,
+//     jasmine: true,
+//     jest: true,
+//   },
+// }
+
+// module.exports = {
+//   extends: [
+//     'eslint:recommended',
+//     'react-app',
+//     'plugin:react/recommended',
+//   ],
+//   plugins: ['react', 'react-hooks'],
+//   parser: '@typescript-eslint/parser',
+//   parserOptions: {
+//     project: './tsconfig.json',
+//     tsconfigRootDir: './',
+//     ecmaFeatures: {
+//       jsx: true,
+//     }
+//   },
+//   env: {
+//     browser: true,
+//     jasmine: true,
+//     jest: true,
+//   },
+//   overrides: [
+//     {
+//       files: ['**/*.ts?(x)'],
+//       extends: [
+//         'plugin:@typescript-eslint/eslint-recommended',
+//         'plugin:@typescript-eslint/recommended',
+//         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+//       ],
+//       plugins: ['@typescript-eslint'],
+//     }
+//   ]
+// }
 
 // module.exports = {
 //   extends: ['eslint:recommended', 'react-app', 'plugin:react/recommended'],
